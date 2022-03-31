@@ -1,12 +1,14 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
+import Layout from '../components/Layout';
 
 const Title = styled.h1`
   color: red;
   font-size: 50px;
 `;
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -16,4 +18,9 @@ export default function Home() {
       <Title>My page</Title>
     </>
   );
-}
+};
+
+export default Home;
+Home.getLayout = (page: NextPage) => {
+  return <Layout>{page}</Layout>;
+};

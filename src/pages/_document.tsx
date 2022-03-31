@@ -1,4 +1,5 @@
 import Document, { DocumentContext, Html, Main, NextScript, Head } from 'next/document';
+import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
@@ -16,10 +17,10 @@ class MyDocument extends Document {
       return {
         ...initialProps,
         styles: (
-          <>
+          <React.Fragment key="styles">
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </>
+          </React.Fragment>
         ),
       };
     } finally {
@@ -27,7 +28,7 @@ class MyDocument extends Document {
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Html lang="pt-BR">
         <Head>
