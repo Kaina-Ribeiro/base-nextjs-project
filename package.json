@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "latest",
@@ -17,6 +19,24 @@
     "@types/react": "17.0.4",
     "@types/react-dom": "17.0.3",
     "@types/styled-components": "5.1.9",
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.3",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.7",
+    "next-compose-plugins": "^2.2.1",
+    "next-transpile-modules": "^9.0.0",
+    "prettier": "^2.6.1",
+    "stylelint": "^14.6.1",
+    "stylelint-config-recommended": "^7.0.0",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^4.5.5"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
