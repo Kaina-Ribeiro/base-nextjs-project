@@ -1,5 +1,5 @@
-import { NextPage } from 'next';
 import Head from 'next/head';
+import { ReactElement } from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 
@@ -21,6 +21,6 @@ const Home = () => {
 };
 
 export default Home;
-Home.getLayout = (page: NextPage) => {
+Home.getLayout = (page: ReactElement) => {
   return <Layout>{page}</Layout>;
 };

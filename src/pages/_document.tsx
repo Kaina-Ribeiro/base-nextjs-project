@@ -1,5 +1,5 @@
 import Document, { DocumentContext, Html, Main, NextScript, Head } from 'next/document';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
@@ -28,7 +28,7 @@ class MyDocument extends Document {
     }
   }
 
-  render(): JSX.Element {
+  render(): ReactElement {
     return (
       <Html lang="pt-BR">
         <Head>
