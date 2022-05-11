@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../styles/global-styles';
 import { theme } from '../themes/theme';
 
-type NextPageWithLayout<P = unknown> = NextPage<P> & {
+type NextPageWithLayout = NextPage & {
   // eslint-disable-next-line no-unused-vars
   getLayout?: (page: ReactElement) => ReactNode;
 };
